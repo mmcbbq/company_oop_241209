@@ -2,9 +2,13 @@
 include '../config/loader.php';
 
 $repo = new EmployeeRepository();
-//var_dump($repo->findAll());
+////var_dump($repo->findAll());
+//$emp = $repo->findById(5);
+//$emp->setFname('Barack');
+//$emp->setLname('Obama');
+//
+//
+//
+//var_dump($repo->update($emp));
 
-
-foreach ($repo->findAll() as $employee){
-    echo $employee->getFname();
-}
+$repo->delete(2);

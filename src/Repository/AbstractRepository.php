@@ -14,10 +14,10 @@ abstract class AbstractRepository
         return new PDO("mysql:host=$dbHost;dbname=$dbName;charset=utf8mb4", $dbUser, $dbPw);
     }
 
-    abstract public function findAll();
-    abstract public function findById(int $id);
-    abstract public function create();
-    abstract public function update(int $id);
+    abstract public function findAll():array;
+    abstract public function findById(int $id):EntityInterface;
+    abstract public function create(EntityInterface $entity):EntityInterface;
+    abstract public function update(EntityInterface $entity):EntityInterface;
     abstract public function delete(int $id);
 
 
