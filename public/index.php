@@ -2,4 +2,4 @@
 include '../config/loader.php';
 
 $controller  = new EmployeeController();
-$controller->showall();
+$controller->delete(6);
