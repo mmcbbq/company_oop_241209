@@ -30,8 +30,6 @@ class EmployeeController implements ControllerInterface
     public function create(): void
     {
         if ($_SERVER['REQUEST_METHOD'] === "GET"){
-            $repo = new EmployeeRepository();
-
             $loader = new \Twig\Loader\FilesystemLoader('../templates/Employee');
             $twig = new \Twig\Environment($loader, []);
             echo $twig->render('employee.form.html.twig');
